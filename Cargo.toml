@@ -1,0 +1,15 @@
+[package]
+name = "kobold-docgate"
+version = "0.1.0"
+edition = "2021"
+description = "Generated-doc freshness gate: checks committed docs against the claim-ladder (court->doc references + hand-stale count drift) and emits a receipt. Catches stale counts a hand-maintained gate cannot."
+authors = ["infinityabundance"]
+license = "Apache-2.0"
+repository = "https://github.com/infinityabundance/kobold-docgate"
+readme = "README.md"
+publish = false
+
+[dependencies]
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+kobold-courts = { path = "../kobold-courts" }
